@@ -31,9 +31,9 @@ Completed by: Marvin Lee
 # Findings:
 --
 
-### Strong positive correlation between Livable Square Footage and number of Bathrooms
+### Strong correlation between livable square footage and number of bathrooms
 
-### R2 value of "0.832" without more subjective variables like "grade" or "condition" achieved
+### R2 value higher than 0.80 achieved, without more subjective variables like "grade" or "condition"
 
 ### Evaluating zipcode, livable square footage and the existence of a basement show initial signs of a reliable home price prediction model
 
@@ -51,7 +51,9 @@ And now, here's a screen shot of the final OLS table:
 The key adjustments made along the way:
 
 <ul>
-    <li>
+    <li>Log-transformation of the target variable</li>
+    <li>Log-transformation of all continuous variables</li>
+    <li>Took steps to make the mode less reliant upon higher home price features, i.e. has_waterfront</li>
 </ul>
 
 
