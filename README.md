@@ -39,9 +39,9 @@ Multicollinearity was discovered, between livable square footage, square footage
 ![alt text](https://github.com/emel333/house-price-predict/blob/main/corr-baths-sqftliving.png "Bathrooms-SqftLiving Correlation")
 
 
-### R2 value higher than 0.80 achieved for "pre-normalized" Model using Training dataset, without more subjective variables like "grade" or "condition"
+### R2 value higher than 0.80 achieved for "pre-normalized" model using training dataset, without more subjective variables like "grade" or "condition" included
 
-The "grade" and "condition" variables, being more subjective in nature, proved to be unnecessary for achieving an R-squared north of 0.80. It turns out that evaluating zipcode, livable square footage and the existence of a bastement show initial signs of a reliable home priced prediction model.
+The "grade" and "condition" variables, being more subjective in nature, proved to be unnecessary for achieving an R-squared north of 0.80. It turns out that evaluating zipcode, livable square footage and the existence of a basement show initial signs of a reliable home priced prediction model.
 
 ![alt text](https://github.com/emel333/house-price-predict/blob/main/first-model.png "Pre-Normalized Data Model (Before normalization)")
 
@@ -57,12 +57,17 @@ While it does look as if valuable information can be obtained from the living_lo
 
 The final model reveals an adjusted R2 of 0.832. Here's a screenshot of the first OLS table run, after stepwise addition performed:
 
-![alt text]([imagelink] "First Post-Target-Variable-Normalized Model")
+![alt text](https://github.com/emel333/house-price-predict/blob/main/after-price-logtransform.png "First Post-Target-Variable-Normalized Model")
 
-And now, here's a screen shot of the final OLS table and the prediction score per the test dataset:
+And now, here's a screen shot of the final OLS table:
 
 ![alt text](https://github.com/emel333/house-price-predict/blob/main/final-model-ols.png "Final Model: After Target Variable Log-Transformation")
+
+When the parameters of this model were applied to the test dataset, here were the results:
+
 ![alt text](https://github.com/emel333/house-price-predict/blob/main/test-data-predict.png "Prediction Accuracy: Test Dataset")
+
+The results of the residual and QQ plot analysis shows that there is normal distribution of errors as well as the variable sqft_above passing the assumptions for regression.
 ![alt text](https://github.com/emel333/house-price-predict/blob/main/resplot-sqft-above-large.png "Residual Plot: Square Foot Above")
 ![alt text](https://github.com/emel333/house-price-predict/blob/main/qq-plots-model-a.png "QQ Plots: sqft_above & has_basement")
 
