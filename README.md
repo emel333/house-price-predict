@@ -35,27 +35,37 @@ Completed by: Marvin Lee
 
 Multicollinearity was discovered, between livable square footage, square footage above ground, and surprisingly, number of bathrooms. Number of bathrooms had strongest correlation with livable square footage. Ultimately, the model did not benefit from having both features.
 
-![alt text]([site] "Initial Heatmap")
-![alt text]([site] "Bathrooms-SqftLiving Correlation")
+![alt text](https://github.com/emel333/house-price-predict/blob/main/heatmap-home-price-vars.png "Initial Heatmap")
+![alt text](https://github.com/emel333/house-price-predict/blob/main/corr-baths-sqftliving.png "Bathrooms-SqftLiving Correlation")
 
 
-### R2 value higher than 0.80 achieved, without more subjective variables like "grade" or "condition"
+### R2 value higher than 0.80 achieved for "pre-normalized" Model using Training dataset, without more subjective variables like "grade" or "condition"
 
 The "grade" and "condition" variables, being more subjective in nature, proved to be unnecessary for achieving an R-squared north of 0.80. It turns out that evaluating zipcode, livable square footage and the existence of a bastement show initial signs of a reliable home priced prediction model.
 
-![alt text]([site] "First Model (Before normalization")
+![alt text](https://github.com/emel333/house-price-predict/blob/main/first-model.png "Pre-Normalized Data Model (Before normalization)")
+
+
+### Living Lot Ratio feature fails to pass Assumption for Regression
+
+While it does look as if valuable information can be obtained from the living_lot_ratio feature I engineered, the residual plot below reveals heteroscedasticity. Thus, as of now, it won't work well as a predictor.
+
+![alt text](https://github.com/emel333/house-price-predict/blob/main/living-lot-ratio-resplot.png "Living Lot Ratio Residual Plot")
 
 
 ### The final model:
 
 The final model reveals an adjusted R2 of 0.832. Here's a screenshot of the first OLS table run, after stepwise addition performed:
 
-![alt text]([site] "First Model: After Target Variable Log-Transformation")
+![alt text]([imagelink] "First Post-Target-Variable-Normalized Model")
 
 And now, here's a screen shot of the final OLS table and the prediction score per the test dataset:
 
-![alt text]([site] "Final Model: After Target Variable Log-Transformation")
-![alt text]([site] "Prediction Accuracy: Test Dataset")
+![alt text](https://github.com/emel333/house-price-predict/blob/main/final-model-ols.png "Final Model: After Target Variable Log-Transformation")
+![alt text](https://github.com/emel333/house-price-predict/blob/main/test-data-predict.png "Prediction Accuracy: Test Dataset")
+![alt text](https://github.com/emel333/house-price-predict/blob/main/resplot-sqft-above-large.png "Residual Plot: Square Foot Above")
+![alt text](https://github.com/emel333/house-price-predict/blob/main/qq-plots-model-a.png "QQ Plots: sqft_above & has_basement")
+
 
 The key adjustments made along the way:
 
