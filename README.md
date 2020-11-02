@@ -33,9 +33,11 @@ Completed by: Marvin Lee
 
 ### Strong positive correlation between Livable Square Footage and number of Bathrooms
 
-### R2 value of "0.832" without more subjective variables like "grade" or "condition" included and with minimal features beyond zipcode (the most significant factor)
+### R2 value of "0.832" without more subjective variables like "grade" or "condition" achieved
 
-### The bare minimum variables (when zipcode data is available)
+### Evaluating zipcode, livable square footage and the existence of a basement show initial signs of a reliable home price prediction model
+
+### Data from higher-priced homes can become outliers for lower-priced homes
 
 
 
@@ -60,7 +62,7 @@ The key adjustments made along the way:
 <ul>
     <li>Given the dataset used here, creating a reliable and trustless method for home price prediction needs location-specific data</li>
     <li>Livable square footage is most important (along with zicpode details) to determine convservative price predictions to be used for loan collateral amount levels</li>
-    <li>REC #1: Develop "condition" or "grade" score by leveraging <i>trustless</i> independent variables</li>
-    <li>REC #2: Perform "segmented modeling" according to home price ranges (i.e. 0-250,250-500,500-750, 750-1M, etc.)</li>
-    <li>REC #3: Evaluate the impact of a "finished basement" (having a basement + have a renovation done) on the model</li>
+    <li>Develop "condition" or "grade" score by leveraging <i>trustless</i> independent variables</li>
+    <li>Perform "segmented modeling" according to home price ranges (i.e. 0-250,250-500,500-750, 750-1M, etc.)</li>
+    <li>Evaluate the impact of a "finished basement" (having a basement + have a renovation done) on the model</li>
 </ul>
