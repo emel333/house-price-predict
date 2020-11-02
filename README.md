@@ -53,26 +53,29 @@ While it does look as if valuable information can be obtained from the living_lo
 ![alt text](https://github.com/emel333/house-price-predict/blob/main/living-lot-ratio-resplot.png "Living Lot Ratio Residual Plot")
 
 
-### The final model:
 
-The final model reveals an adjusted R2 of 0.832. Here's a screenshot of the first OLS table run, after stepwise addition performed:
+# Evolution of the Model:
+
+After stepwise addition and log-transformation of the target variable, an adjusted R2 of 0.856 was achieved. Here's a screenshot.
 
 ![alt text](https://github.com/emel333/house-price-predict/blob/main/after-price-logtransform.png "First Post-Target-Variable-Normalized Model")
 
-And now, here's a screen shot of the final OLS table:
+
+### Here's a screenshot of the final model after all evaluations, tests and updating was done:
 
 ![alt text](https://github.com/emel333/house-price-predict/blob/main/final-model-ols.png "Final Model: After Target Variable Log-Transformation")
 
-When the parameters of this model were applied to the test dataset, here were the results:
+### When the parameters of this model were applied to the test dataset, here were the results:
 
 ![alt text](https://github.com/emel333/house-price-predict/blob/main/test-data-predict.png "Prediction Accuracy: Test Dataset")
 
-The results of the residual and QQ plot analysis shows that there is normal distribution of errors as well as the variable sqft_above passing the assumptions for regression.
+### The results of the residual and QQ plot analysis showed a normal distribution of errors as well as the variable sqft_above passing the assumptions for regression.
+
 ![alt text](https://github.com/emel333/house-price-predict/blob/main/resplot-sqft-above-large.png "Residual Plot: Square Foot Above")
 ![alt text](https://github.com/emel333/house-price-predict/blob/main/qq-plots-model-a.png "QQ Plots: sqft_above & has_basement")
 
 
-The key adjustments made along the way:
+#### The key adjustments made along the way:
 
 <ul>
     <li>Log-transformation of the target variable</li>
